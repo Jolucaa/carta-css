@@ -1,0 +1,33 @@
+table td:nth-child() {
+    background-color: grey;
+ }
+
+table > tbody{
+    text-align: left
+}
+
+td{
+    padding: 5em;
+}
+
+@keyframes bill-movement {
+    0% {transform: matrix(2, -1.5, 1, 2, 150, 150);}
+    100% {transform: matrix(2, -1.5, 1, 2, 100, 0);}
+  }
+
+ .bill { 
+    width: 650em; 
+    vertical-align: center;
+    font-family: Diplomata, Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px black solid;
+    transition: width 2s, health 2s, transform 2s;
+    transform: matrix(2, -1.5, 1, 2, 150, 150);
+    position: relative;
+    animation-name: bill-movement;
+    animation-duration: 0s;
+ }
+
+ .bill:hover {
+    transform: matrix(2, -1.5, 1, 2, 100, 0);
+    animation-duration: 4s;
+ }
