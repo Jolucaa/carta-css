@@ -12,7 +12,8 @@ td{
 
 @keyframes bill-movement {
     0% {transform: matrix(2, -1.5, 1, 2, 150, 150);}
-    100% {transform: matrix(2, -1.5, 1, 2, 100, 0);}
+    50% {transform: matrix(2, -1.5, 1, 2, 100, 0);}
+    100%{transform: matrix(2, -1.5, 1, 2, 150, 150); z-index: 99999;}
   }
 
  .bill { 
