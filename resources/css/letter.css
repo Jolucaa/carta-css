@@ -1,14 +1,14 @@
-/* fondo de madera, carta encima como si fuera papel, factura tambien como si estubiera impresa en papel.*/
 @font-face {
-   font-family: Pacifico;
+   font-family: Pacifico, Diplomata;
    src: url(../fonts/Pacifico-Regular.ttf);
-   font-family: Diplomata;
    src: url(../fonts/DiplomataSC-Regular.ttf);
 }
 
 body{
    background: url(../images/wood-1853403_1280.jpg) repeat;
    font-family: Pacifico, Verdana, Geneva, Tahoma, sans-serif;
+   z-index: -99999;
+   position: absolute;
 }
 
 #header-letter{
@@ -16,8 +16,21 @@ body{
 }
 
 .letter {
-   margin: 2em 30em;
-   border: 2em black solid;
-   transform: perspective(10px);
-   box-shadow: 3em 0 3em 0;
+   margin: 2rem 5rem;
+   padding: 3rem;
+   background-color: beige;
+   box-shadow:0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+   z-index: 1;
+}
+
+.letter [ol][ul]{
+   list-style-position: inside;
+   padding: 1em;
+}
+
+.letter ol > li{
+   list-style-type:decimal ;
+}
+.letter ul > li{
+   list-style-type: circle;
 }

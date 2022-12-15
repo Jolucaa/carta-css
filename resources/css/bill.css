@@ -1,34 +1,77 @@
-table td:nth-child() {
+table th{
     background-color: grey;
- }
+}
 
 table > tbody{
-    text-align: left
+    text-align: left;
+    border-spacing: 0;
+
+}
+
+table > caption{
+    border: 1px black solid;
+    border-radius: 15px 15px 0 0;
+    border-left: dotted;
 }
 
 td{
-    padding: 5em;
+    padding: 1rem;
+}
+
+tr > td[|="4"] , td{
+    width: 25%;
+    background-color: grey;
+}
+
+.td-col-3{
+    column-span: 3;
+}
+
+.td-col-2{
+    column-span: 2;
 }
 
 @keyframes bill-movement {
-    0% {transform: matrix(2, -1.5, 1, 2, 150, 150);}
-    50% {transform: matrix(2, -1.5, 1, 2, 100, 0);}
-    100%{transform: matrix(2, -1.5, 1, 2, 150, 150); z-index: 99999;}
-  }
+    /*0% {transform: matrix(1, -1, 1, 1, 0, 0);}*/
+    /*50% {transform: matrix(1, -1, 1, 1, 450, 0); z-index: 2;}*/
+    /*100%{transform: matrix(1, -1, 1, 1, 650, 210);z-index: 2;}*/
+    0% {left: 0;top:0;}
+    50%{left: 5rem;top:50rem;z-index: 2;}
+    100%{left: 0;top:0;z-index: 2;}
+}
 
- .bill { 
-    width: 650em; 
-    vertical-align: center;
+.bill-container{
+    z-index: -2;
+    position: relative;
+}
+
+ .bill {
+    box-shadow:0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    width: 50rem;
+    height: 10rem;
+    opacity: 95%;
     font-family: Diplomata, Verdana, Geneva, Tahoma, sans-serif;
     border: 2px black solid;
-    transition: width 2s, health 2s, transform 2s;
-    transform: matrix(2, -1.5, 1, 2, 150, 150);
+    border-left: dotted;
+    border-radius: 0 0 15px 15px;
+    transform: matrix(1, -1, 1, 1, 450, -450);
+    transition: transform 2s;
     position: relative;
     animation-name: bill-movement;
+    z-index: -1;
     animation-duration: 0s;
+    background-color: #00bcd4;
+    animation-iteration-count: revert;
+    animation-fill-mode: forwards;
  }
 
  .bill:hover {
-    transform: matrix(2, -1.5, 1, 2, 100, 0);
-    animation-duration: 4s;
+    animation-duration: 4S;
+    animation-delay: 2s;
+
+
+ }
+
+ .bill > table {
+     border-radius: 15px;
  }
