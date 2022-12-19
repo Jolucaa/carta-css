@@ -34,3 +34,11 @@ body{
 .letter ul > li{
    list-style-type: circle;
 }
+
+.text-italic{
+   font-style: italic;
+}
+
+.text-bold{
+   font-weight: bold;
+}

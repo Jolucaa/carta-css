@@ -1,43 +1,61 @@
+table, th, td, caption{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
 table th{
     background-color: grey;
 }
 
 table > tbody{
     text-align: left;
-    border-spacing: 0;
-
 }
 
 table > caption{
-    border: 1px black solid;
     border-radius: 15px 15px 0 0;
     border-left: dotted;
+    background-color: #00bcd4;
 }
 
 td{
+    border-radius: 15px;
+    counter-increment: td-element;
     padding: 1rem;
 }
 
-tr > td[|="4"] , td{
+tr{
+    --td-number(counter(td-element))
+    content: attr(data-td-count var(--td-number));
+    counter-reset: td-elements;
+}
+
+
+tr[data-td-count|="4"] > td{
     width: 25%;
     background-color: grey;
+}
+
+tr[data-td-count|="2"] > td{
+    width: 50%;
+    background-color: grey;
+    text-decoration: black;
+}
+
+td[colspan="2"]::first-line{
+    font-weight: bold;
 }
 
 .td-col-3{
     column-span: 3;
 }
 
-.td-col-2{
-    column-span: 2;
-}
-
 @keyframes bill-movement {
     /*0% {transform: matrix(1, -1, 1, 1, 0, 0);}*/
     /*50% {transform: matrix(1, -1, 1, 1, 450, 0); z-index: 2;}*/
     /*100%{transform: matrix(1, -1, 1, 1, 650, 210);z-index: 2;}*/
-    0% {left: 0;top:0;}
-    50%{left: 5rem;top:50rem;z-index: 2;}
-    100%{left: 0;top:0;z-index: 2;}
+    /*0% {left: 0;top:0;}*/
+    /*50%{left: 5rem;top:50rem;z-index: 2;}*/
+    /*100%{left: 0;top:0;z-index: 2;}*/
 }
 
 .bill-container{
@@ -54,7 +72,7 @@ tr > td[|="4"] , td{
     border: 2px black solid;
     border-left: dotted;
     border-radius: 0 0 15px 15px;
-    transform: matrix(1, -1, 1, 1, 450, -450);
+    /*transform: matrix(1, -1, 1, 1, 450, -450);*/
     transition: transform 2s;
     position: relative;
     animation-name: bill-movement;
@@ -66,10 +84,7 @@ tr > td[|="4"] , td{
  }
 
  .bill:hover {
-    animation-duration: 4S;
-    animation-delay: 2s;
-
-
+     animation-duration: 4S;
  }
 
  .bill > table {

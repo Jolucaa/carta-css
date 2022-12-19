@@ -14,31 +14,31 @@
     <main class="letter">
         <header id="header-letter">
             <section>
-                <bdo dir="rtl">
-                        <p>
-                            <i>
-                                <strong>Dr. Eleanor Gaye</strong><br>
-                                <small>
-                                Awesome Science faculty<br>
-                                University of Awesome<br>
-                                <span dir="ltr">Bobtown, CA 99999,</span><br>
-                                <b>USA</b><br>
-                                </small>
-                                <strong>Tel:</strong> 123-456-7890<br>
-                                <strong>Email:</strong><small>no_reply®example.com</small><br>
-                            </i>
-                        </p>
-                        <p><time data-time="2016-06-20" dir="ltr">20 January 2016</time></p>
-                    </bdo>
+                    <p class="text-italic">
+                        <bdo dir="rtl">
+                        <strong>Dr. Eleanor Gaye</strong><br>
+                        <small>
+                            Awesome Science faculty<br>
+                            University of Awesome<br>
+                            <span dir="ltr">Bobtown, CA 99999,</span><br>
+                            <span class="text-bold">USA</span><br>
+                        </small>
+                        <strong>Tel:</strong> 123-456-7890<br>
+                        <strong>Email:</strong><small>no_reply®example.com</small><br>
+                        </bdo>
+                    </p>
+                    <p>
+                        <bdo dir="rtl">
+                            <time data-time="2016-06-20" dir="ltr">20 January 2016</time>
+                        </bdo>
+                    </p>
                 </section>
             <section>
-                <p>
-                    <i>
-                        <strong>Miss Eileen Dover</strong><br>
-                        <small>4321 Cliff Top Edge</small><br>
-                        <small>Dover, CT9 XXX</small><br>
-                        <small>UK</small><br>
-                    </i>
+                <p class="text-italic">
+                    <strong>Miss Eileen Dover</strong><br>
+                    <small>4321 Cliff Top Edge</small><br>
+                    <small>Dover, CT9 XXX</small><br>
+                    <small>UK</small><br>
                 </p>
             </section>
         </header>
@@ -79,13 +79,13 @@
 
             <h2>Exotic dance moves</h2>
                 <p>
-                    Yes, you are right! As part of my post-doctorate work. I <i>did</i> study exotic tribal dances. To answer your question,
+                    Yes, you are right! As part of my post-doctorate work. I <span class="text-italic">did</span> study exotic tribal dances. To answer your question,
                     my favourite dances are as follows, with definitions:
                 </p>
                 <dl>
                     <dt>Polynesian chicken dance</dt>
                         <dd>
-                            A little known but <i>very</i> influential dance dating back as far as 300<u>BC</u>. a whole village would dance around
+                            A little known but <span class="text-italic">very</span> influential dance dating back as far as 300<u>BC</u>. a whole village would dance around
                             in a circle like chickens, to encourage their livestock or be "fruitful*.
                         </dd>
                     <dt>Icelandic brownian shuffle</dt>
@@ -109,7 +109,7 @@
             <br>
             <br>
             <p>Dr Eleanor Gaye</p>
-            <p>University of Awesome motto: <q>Be excellent to each other.</q> -- <i>Bill S Preston. <u>Esq</u></i></p>
+            <p>University of Awesome motto: <q>Be excellent to each other.</q> -- <span class="text-italic">Bill S Preston. <u>Esq</u></span></p>
     </main>
         <section class="bill-container">
             <table class="bill" >
@@ -121,25 +121,25 @@
                     </tr>    
 
                     <tr>
-                        <td colspan="2" width="50%">
-                            <b>Pay to:</b><br>
+                        <td colspan="2">
+                            Pay to:<br>
                             Acme Billing Co.<br>
                             123 Main St.<br>
                             Cityville, NA 12345
                         </td>
 
-                        <td colspan="2" width="50%">
-                            <b>Customer</b><br>
+                        <td colspan="2">
+                            Customer<br>
                             John Smith<br>
                             321 Willow Way<br>
                             Southeast Northwestershire, MA 54321
                         </td>
                     </tr>
                     <tr>
-                        <td width="25%"><b>Name / Description</b></td>
-                        <td width="25%"><b>Qty</b></td>
-                        <td width="25%"><b>@</b></td>
-                        <td width="25%"><b>Cost</b></td>
+                        <td>Name / Description</td>
+                        <td>Qty</td>
+                        <td>@</td>
+                        <td>Cost</td>
                     </tr>
                     <tr>
                         <td>Paperclips</td>
@@ -154,16 +154,16 @@
                         <td>100.00</td>
                     </tr>
                     <tr>
-                        <th colspan="3"><b>Subtotal</b></th>
+                        <th scope="row" colspan="3">Subtotal</th>
                         <td>100.00</td>
                     </tr>
                     <tr>
-                        <th colspan="2"><b>Tax</b></th>
+                        <th scope="row" colspan="2">Tax</th>
                         <td>8%</td>
                         <td>110.00</td>
                     </tr>
                     <tr>
-                        <th colspan="3"><b>Grand Total</b></th>
+                        <th scope="row" colspan="3">Grand Total</th>
                         <td>$ 118.80</td>
                     </tr>
                 </tbody>
