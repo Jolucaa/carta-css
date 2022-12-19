@@ -61,6 +61,7 @@ td[colspan="2"]::first-line{
 .bill-container{
     z-index: -2;
     position: relative;
+    text-align: center;
 }
 
  .bill {
