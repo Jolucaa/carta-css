@@ -72,6 +72,7 @@ td[colspan="2"]::first-line{
     border: 2px black solid;
     border-left: dotted;
     border-radius: 0 0 15px 15px;
+     vertical-align: center;
     /*transform: matrix(1, -1, 1, 1, 450, -450);*/
     transition: transform 2s;
     position: relative;
